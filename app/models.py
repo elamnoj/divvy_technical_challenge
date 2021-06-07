@@ -6,7 +6,7 @@ class Trip(db.Model):
     trip_id = db.Column(db.Integer, primary_key=True)
     starttime = db.Column(db.DateTime, nullable=False, default=dt.utcnow)
     stoptime = db.Column(db.DateTime, nullable=False, default=dt.utcnow)
-    bikeid = db.Column(db.Integer, nullable=False)
+    bikeid = db.Column(db.Integer)
     from_station_id = db.Column(db.Integer, nullable=False)
     from_station_name = db.Column(db.String(125), nullable=False)
     to_station_id = db.Column(db.Integer, nullable=False)
