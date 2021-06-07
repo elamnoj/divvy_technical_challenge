@@ -1,12 +1,12 @@
 from app import app, db
-from flask import jsonify, request
+from flask import jsonify, request, render_template
 from app.models import Trip
 from datetime import datetime
 
 
 @app.route('/', methods=['GET'])
 def home():
-    return "Divvy API"
+    return render_template("home.html")
 
 
 @app.route('/trip', methods=['GET'])
